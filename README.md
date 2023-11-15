@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # my_portfolio_backend
 =======
 <p align="center">
