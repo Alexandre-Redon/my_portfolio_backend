@@ -5,18 +5,18 @@ export class Project {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   name: string;
 
-  @Column()
+  @Column({ nullable: false })
   description: string;
 
-  @Column()
+  @Column({ nullable: true })
   imageUrl: string;
 
-  @Column()
+  @Column({ nullable: true })
   githubUrl: string;
 
-  @Column()
+  @Column({ nullable: true })
   websiteUrl: string;
 }

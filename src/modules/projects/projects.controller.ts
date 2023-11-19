@@ -7,11 +7,11 @@ import {
   Param,
   Body,
 } from '@nestjs/common';
-import { ProjectsService } from './projects.services';
+import { ProjectsService } from './projects.service';
 import { Project } from './entities/projects.entitiy';
 
 @Controller('projects')
-export class ProjectController {
+export class ProjectsController {
   constructor(private readonly projectService: ProjectsService) {}
 
   @Get()
