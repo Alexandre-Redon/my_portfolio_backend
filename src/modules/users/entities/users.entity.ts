@@ -1,8 +1,8 @@
 import { IUser } from 'src/types/user';
-import { Column, Entity, PrimaryGeneratedColumn, Timestamp } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('user')
-export class User extends Timestamp implements IUser {
+export class User implements IUser {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
