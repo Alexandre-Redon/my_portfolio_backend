@@ -15,4 +15,5 @@ export default new DataSource({
   database: conf['db_name'],
   entities: ['src/**/*.entity{.ts,.js}'],
   migrations: ['src/database/migrations/*{.ts,.js}'],
+  ssl: true,
 });

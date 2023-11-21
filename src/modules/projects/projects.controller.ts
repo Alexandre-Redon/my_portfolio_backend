@@ -16,11 +16,12 @@ export class ProjectsController {
 
   @Get()
   async findAll(): Promise<Project[]> {
+    console.log(this.projectService.findAll());
     return this.projectService.findAll();
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: number): Promise<Project> {
+  async findOne(@Param('id') id: string): Promise<Project> {
     return this.projectService.findById(id);
   }
 
@@ -31,14 +32,14 @@ export class ProjectsController {
 
   @Put(':id')
   async update(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() project: Project,
   ): Promise<void> {
     return this.projectService.update(id, project);
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: number): Promise<void> {
+  async delete(@Param('id') id: string): Promise<void> {
     return this.projectService.delete(id);
   }
 }

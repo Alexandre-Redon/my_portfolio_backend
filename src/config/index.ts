@@ -23,7 +23,7 @@ export default [
         database: configService.getOrThrow<string>('db_name'),
         entities: [],
         autoLoadEntities: true,
-        ssl: process.env.NODE_ENV === 'production',
+        ssl: true,
       };
     },
   }),

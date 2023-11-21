@@ -18,15 +18,15 @@ export class ProjectsService {
     return this.projectRepository.find();
   }
 
-  async findById(id: number): Promise<Project> {
+  async findById(id: string): Promise<Project> {
     return this.projectRepository.findOneBy({ id });
   }
 
-  async update(id: number, project: Project): Promise<void> {
+  async update(id: string, project: Project): Promise<void> {
     await this.projectRepository.update(id, project);
   }
 
-  async delete(id: number): Promise<void> {
+  async delete(id: string): Promise<void> {
     await this.projectRepository.delete(id);
   }
 }
