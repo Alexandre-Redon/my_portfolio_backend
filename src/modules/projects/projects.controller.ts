@@ -8,7 +8,7 @@ import {
   Body,
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
-import { Project } from './entities/projects.entitiy';
+import { Project } from './entities/projects.entity';
 
 @Controller('projects')
 export class ProjectsController {
@@ -24,7 +24,7 @@ export class ProjectsController {
     return this.projectService.findById(id);
   }
 
-  @Post()
+  @Post(':create')
   async create(@Body() project: Project): Promise<void> {
     this.projectService.create(project);
   }
